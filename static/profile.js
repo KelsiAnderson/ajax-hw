@@ -8,8 +8,8 @@ function submitProfile(evt) {
     occupation: $('#occupation-field').val()
   };
 
-  $.post('/api/profile', formData, (response) => {
-    $('#profiles').append(`
+  $.post('/profile', formData, (response) => {
+    $('#profile').append(`
       <li>${response.fullname} the ${response.occupation} is ${response.age}</li>
     `);
   });
